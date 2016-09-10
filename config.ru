@@ -2,4 +2,6 @@
 
 require_relative 'config/environment'
 
+root 'welcome#index'
+
 run Rails.application
