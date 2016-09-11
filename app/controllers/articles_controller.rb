@@ -6,7 +6,7 @@ class ArticlesController < ApplicationController
     @subjects = []
     @actions = []
     @objects = []
-    
+    @locations = []
     #will store subject, action and object of first title
     @key_terms = {}
 
@@ -38,6 +38,12 @@ class ArticlesController < ApplicationController
           @key_terms["object"] = object if index == 0
           @objects << object
         end
+
+        if relation.key?('location')
+          location = relation['location']['text']
+          @key_terms["location"] = location if index == 0 && location
+          @locations << location
+        end
       end
     end
 
@@ -47,6 +53,8 @@ class ArticlesController < ApplicationController
     @new_title.gsub!(@key_terms["action"], @actions.sample)
     #swaps the object of original title with random object from all articles
     @new_title.gsub!(@key_terms["object"], @objects.sample)
+    #swaps the location of original title with random location from all articles
+    @new_title.gsub!(@key_terms["location"], @locations.sample) if @key_terms["location"]
 
   end
 end
