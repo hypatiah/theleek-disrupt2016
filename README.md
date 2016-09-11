@@ -1,5 +1,11 @@
 # README
 
+##TEAM
+* Chris Wong 
+* Danielle Hassid
+* Kaitlyn McPartland
+* Samuel Heinz
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
