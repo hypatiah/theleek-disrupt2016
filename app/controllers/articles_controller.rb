@@ -28,17 +28,23 @@ class ArticlesController < ApplicationController
               action = relation['action']['text']
               @key_terms["action"] = action if index == 0
               @actions << action
-              # puts 'action: ' + relation['action']['text']
             end
 
             if relation.key?('object')
               object = relation['object']['text']
               @key_terms["object"] = object if index == 0
               @objects << object
-              # puts 'object: ' + relation['object']['text']
-            end  
-      end
+            end
+          end
     end
+      @new_title = @format_first_title.gsub(@key_terms["subject"], @subjects.sample)
+      @new_title.gsub!(@key_terms["action"], @actions.sample)
+      @new_title.gsub!(@key_terms["object"], @objects.sample)
+
+      # @format_first_title.gsub!(@key_terms["subject"], @subjects.sample)
+      # @format_first_title.gsub!(@key_terms["action"], @actions.sample)
+      # @format_first_title.gsub!(@key_terms["object"], @objects.sample)
+
   end
 end
     # articles.each do |article|
