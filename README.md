@@ -1,10 +1,11 @@
 # README
 
 ##TEAM
-* Chris Wong 
-* Danielle Hassid
-* Kaitlyn McPartland
-* Samuel Heinz
+* Chris Wong - @Chris-Wong-1
+* Danielle Hassid - @hypatiah
+* Kaitlyn McPartland - @kaitlynmcpartland
+* Samuel Heinz - @samheinz
+* Will Friebel - @wfriebel
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
